@@ -30,7 +30,7 @@ async function seed() {
     await Promise.all([User.deleteMany({}), Product.deleteMany({}), Order.deleteMany({}), Contact.deleteMany({})]);
     console.log('🗑️  Cleared collections');
 
-    const admin = await User.create({ name:'Print3D Admin', email: process.env.ADMIN_EMAIL || 'admin@print3d.com', password: process.env.ADMIN_PASSWORD || 'Admin@123456', role:'admin', phone:'+91 98765 43210' });
+    const admin = await User.create({ name:'Print3D Admin', email: process.env.ADMIN_EMAIL || 'admin@Thrust3D.com', password: process.env.ADMIN_PASSWORD || 'Admin@123456', role:'admin', phone:'+91 98765 43210' });
     console.log(`👑 Admin: ${admin.email}`);
 
     const users = await User.create([
